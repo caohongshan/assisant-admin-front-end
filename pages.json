@@ -1,0 +1,97 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/tian-user-cashouts/list",
+			"style": {
+				"navigationBarTitleText": "列表"
+			}
+		},
+		{
+			"path": "pages/tian-mall-orders/add",
+			"style": {
+				"navigationBarTitleText": "新增"
+			}
+		}, 
+		{
+			"path": "pages/tian-mall-orders/edit",
+			"style": {
+				"navigationBarTitleText": "编辑"
+			}
+		}, 
+		{
+			"path": "pages/tian-mall-orders/list",
+			"style": {
+				"navigationBarTitleText": "列表"
+			}
+		},
+		{
+			"path": "pages/opendb-mall-categories/add",
+			"style": {
+				"navigationBarTitleText": "新增"
+			}
+		}, 
+		{
+			"path": "pages/opendb-mall-categories/edit",
+			"style": {
+				"navigationBarTitleText": "编辑"
+			}
+		}, 
+		{
+			"path": "pages/opendb-mall-categories/list",
+			"style": {
+				"navigationBarTitleText": "列表"
+			}
+		}, 
+		{
+			"path": "pages/opendb-mall-goods/add",
+			"style": {
+				"navigationBarTitleText": "新增"
+			}
+		}, 
+		{
+			"path": "pages/opendb-mall-goods/edit",
+			"style": {
+				"navigationBarTitleText": "编辑"
+			}
+		}, 
+		{
+			"path": "pages/opendb-mall-goods/list",
+			"style": {
+				"navigationBarTitleText": "列表"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"topWindow": false,
+				"leftWindow": false,
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+	"globalStyle": {		
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "管理系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"topWindow": {
+		"path": "windows/topWindow",
+		"style": {
+			"height": "60px"
+		},
+		"matchMedia": {
+			"minWidth": 0
+		}
+	},
+	"leftWindow": {
+		"path": "windows/leftWindow",
+		"style": {
+			"width": "230px"
+		}
+	}
+}

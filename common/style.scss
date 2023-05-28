@@ -1,0 +1,271 @@
+/* #ifndef APP-NVUE */
+page{
+	background: #F8F8F8;
+	font-size: $uni-font-size-base;
+}
+.font-bold{
+	font-weight: bold;
+}
+.colorBlue {
+	color: #3E8BFC;
+}
+
+.colorInfo {
+	color: #c6c8c7;
+}
+.colorWhite {
+	color: #FFFFFF;
+}
+
+.colorGray {
+	color: #757575;
+}
+.colorRed {
+	color: #dd524d;
+}
+
+.app_blue_text_icon {
+	display: inline-block;
+	border-radius: 100px;
+	background: #edf6ff;
+	padding: 7rpx 20rpx;
+}
+
+.mb20 {
+	margin-bottom: 20upx;
+}
+
+.mb10 {
+	margin-bottom: 10upx;
+}
+
+.text-hide {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+.text-1{
+	word-break:break-all;
+	display:-webkit-box;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+	overflow:hidden;
+}
+.text-2{
+	word-break:break-all;
+	display:-webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+	overflow:hidden;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+
+.wrap {
+	padding: 24rpx;
+}
+.wrap-sm {
+	padding: 12rpx;
+}
+.wrap-lg{
+	padding: 32rpx;
+}
+.wrap_bg {
+	background: #FFFFFF;
+}
+.wrap_search {
+	background: #FFFFFF;
+}
+
+.bg-white {
+	background: #FFFFFF;
+}
+.bg-gray{
+	background: #efefef;
+}
+.bg-blue{
+	background: #3E8BFC;
+}
+.border-radius{
+	border-radius:12rpx;
+}
+.user-avatar{
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+}
+
+
+.ti-flex {
+	display: flex;
+	align-items: center;
+	&.between{
+		justify-content: space-between;
+	}
+}
+.flex-center {
+	align-items: center;
+}
+.flex-column {
+	flex-direction: column;
+}
+.flex-end{
+	justify-content: end;
+}
+.price {
+	margin-right: 12upx;
+	font-size: 26rpx;
+	color: $uni-red;
+
+	&:before {
+		content: '￥';
+		font-size: 0.8em;
+	}
+
+	&.del {
+		font-size: 22rpx;
+		text-decoration: line-through;
+		
+		color: #858585;
+		&:before {
+			font-size: 0.8em;
+		}
+	}
+
+	&.emphasis {
+		font-size: 22rpx;
+		color: #1fb51f;
+	}
+
+	&.warning {
+		color: $uni-color-warning;
+	}
+	&.error {
+		color: $uni-color-error;
+	}
+}
+
+// 定义flex等分
+@for $i from 0 through 12 {
+	.flex-#{$i} {
+		flex: $i;
+	}
+}
+
+// 定义字体(px)单位，小于20都为px单位字体
+@for $i from 9 to 20 {
+	.font-#{$i} {
+		font-size: $i + px;
+	}
+}
+
+// 定义字体(rpx)单位，大于或等于20的都为rpx单位字体
+@for $i from 20 through 40 {
+	.font-#{$i} {
+		font-size: $i + rpx;
+	}
+}
+
+// 定义内外边距，历遍1-120
+@for $i from 0 through 120 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		//图片固定宽高
+		.image-width-#{$i} {
+			width: $i + rpx;
+			height: $i + rpx;
+		}
+		// 得出：u-margin-30或者u-m-30
+		.margin-#{$i}, .m-#{$i} {
+			margin: $i + rpx!important;
+		}
+		
+		// 得出：u-padding-30或者u-p-30
+		.padding-#{$i}, .p-#{$i} {
+			padding: $i + rpx!important;
+		}
+		
+		@each $short, $long in l left, t top, r right, b bottom {
+			// 缩写版，结果如： u-m-l-30
+			// 定义外边距
+			.m-#{$short}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.p-#{$short}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+			
+			// 完整版，结果如：u-margin-left-30
+			// 定义外边距
+			.margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+		}
+		.padding-lr-#{$i}{
+			padding-left: $i + rpx!important;
+			padding-right: $i + rpx!important;
+		}
+	}
+}
+.family-name {
+	background: rgb(112, 181, 255);
+	width: 76rpx;
+	height: 76rpx;
+	text-align: center;
+	line-height: 74rpx;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 12px;
+	margin-right: 22rpx;
+}
+
+.scroll-view_H{
+	white-space: nowrap;
+	width: 100%;
+}
+.scroll-view-item_H{
+	display: inline-block;
+	text-align: center;
+	font-size: 18px;
+}
+
+.under-line{
+	position: relative;
+	&::after{
+		content: " ";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-bottom: 2rpx solid $uni-border-color;
+		transform:scaleY(0.5);
+	}
+}
+.left-line{
+	position: relative;
+	&::after{
+		content: " ";
+		position: absolute;
+		top: 15%;
+		bottom: 15%;
+		left: 0;
+		border-left: 2rpx solid $uni-border-color;
+		transform:scaleX(0.5);
+	}
+	&.tilt::after{
+		transform: skewX(-30deg);
+	}
+}
+/* #endif */

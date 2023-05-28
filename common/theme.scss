@@ -1,0 +1,75 @@
+.uni-app--showleftwindow .uni-container .uni-forms .uni-forms {
+	padding: 0;
+}
+
+.uni-container .uni-data-checklist {
+	width: 900rpx;
+}
+
+.uni-easyinput,
+.cloud-image,
+.uni-forms-item__content {
+	max-width: 960rpx;
+}
+.uni-table-scroll{
+	// min-height: 500px;
+}
+.uni-forms-item .ly-tree-node.is-expanded>.ly-tree-node__children {
+	display: flex !important;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.uni-forms-item .ly-tree-node.is-expanded>.ly-tree-node__children .ly-tree-node__content {
+	padding: 20rpx;
+}
+
+.uni-forms-item .uni-forms-item__inner {
+	padding-bottom: 10px;
+}
+
+.sidebar .uni-nav-menu {
+	width: 230px;
+}
+.uni-left-window .uni-scroll-view::-webkit-scrollbar {
+		display: none;
+	}
+.uni-sub-menu .uni-menu-item {
+	height: 46px;
+}
+.uni-tag+.uni-tag{
+	margin-left: 12rpx;
+}
+.uni-table {
+	.uni-table-td {
+		font-size: 12px;
+		padding: 4px 8px;
+		line-height: 18px !important;
+	}
+	.input-value{
+		font-size: 12px !important;
+		line-height: 18px !important;
+	}
+}
+.uni-header{
+	height: 45px;
+}
+.uni-button{
+	line-height: 1.6;
+}
+.icon-button,.icon-button[size=mini]{
+	line-height: 1.4;
+	padding: 0 0.6em;
+}
+.uni-forms-item__label{
+	min-width: 80px;
+}
+@media screen and (min-width: 450px) {
+	::v-deep .uni-forms-item__label {
+		margin-right: 15px;
+	}
+
+	::v-deep .uni-error-message {
+		margin-left: 10px !important;
+	}
+}

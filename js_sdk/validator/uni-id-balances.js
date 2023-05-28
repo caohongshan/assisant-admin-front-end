@@ -1,0 +1,67 @@
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+
+
+const validator = {
+	"user_id": {
+		"rules": [{
+				"required": true
+			},
+			{
+				"format": "string"
+			}
+		]
+	},
+	"amount": {
+		"rules": [{
+				"required": true
+			},
+			{
+				"format": "int"
+			}
+		]
+	},
+	"type": {
+		"rules": [{
+				"format": "int"
+			},
+			{
+				"range": [
+					1,
+					2
+				]
+			}
+		]
+	},
+	"balance": {
+		"rules": [{
+				"required": true
+			},
+			{
+				"format": "int"
+			}
+		]
+	},
+	"comment": {
+		"rules": [{
+			"format": "string"
+		}]
+	},
+	"create_date": {
+		"rules": [{
+			"format": "timestamp"
+		}]
+	}
+}
+
+const enumConverter = {
+	type_valuetotext:{
+		"1":"收入",
+		"2":"支出",
+	}
+}
+
+export {
+	validator,
+	enumConverter
+}
